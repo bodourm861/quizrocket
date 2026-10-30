@@ -1,0 +1,11 @@
+Type,Question,Answer A,Answer B,Answer C,Answer D,Correct,Time (sec),Points,Image URL
+multiple_choice,What does mid– mean?,after,middle,before,,B,20,1000,
+multiple_choice,Which word means "to pay before"?,postpay,midpay,prepay,,C,20,1000,
+multiple_choice,Postwar means…,before the war,after the war,in the war,,B,20,1000,
+multiple_choice,Which word has NO real prefix?,preview,poster,midweek,,B,20,1000,
+multiple_choice,fore– has the same meaning as…,pre–,post–,mid–,,A,20,1000,
+multiple_choice,____town = the centre of a city,pre,fore,mid,,C,20,1000,
+true_false,"""Forest"" has a real prefix.",,,,,False,10,1000,
+true_false,"""Prepay"" has a real prefix.",,,,,True,10,1000,
+multiple_choice,Please ____heat the oven before you bake the cake.,pre,post,mid,fore,A,20,1000,
+multiple_choice,The weather ____cast says it will rain tomorrow.,mid,fore,post,pre,B,20,2000,

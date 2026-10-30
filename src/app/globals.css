@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Baloo 2", "Nunito", ui-rounded, system-ui, sans-serif;
+  --font-sans: "Nunito", ui-rounded, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-ink: #1d1442;
+  --color-ink-soft: #4b4475;
+  --color-paper: #f7f5ff;
+  --color-brand-50: #f2efff;
+  --color-brand-100: #e4ddff;
+  --color-brand-200: #c9bcff;
+  --color-brand-400: #8b6cff;
+  --color-brand-500: #6d4aff;
+  --color-brand-600: #5a32f0;
+  --color-brand-700: #4722c9;
+  --color-brand-900: #2a1477;
+  --color-rocket: #ff7a1a;
+  --color-rocket-dark: #e5600a;
+
+  /* answer colours (white text ≥ 4.5:1 except sun, which uses dark text) */
+  --color-ans-a: #d92d55;
+  --color-ans-b: #1f6fe0;
+  --color-ans-c: #f5b400;
+  --color-ans-d: #0a7a5a;
+
+  --animate-pop: pop 0.35s cubic-bezier(.2, 1.4, .4, 1) both;
+  --animate-rise: rise 0.45s cubic-bezier(.2, .9, .3, 1) both;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-wiggle: wiggle 0.5s ease-in-out;
+  --animate-pulse-soft: pulse-soft 1.6s ease-in-out infinite;
+
+  @keyframes pop { 0% { transform: scale(.6); opacity: 0 } 100% { transform: scale(1); opacity: 1 } }
+  @keyframes rise { 0% { transform: translateY(18px); opacity: 0 } 100% { transform: none; opacity: 1 } }
+  @keyframes float { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+  @keyframes wiggle { 0%, 100% { transform: rotate(0) } 25% { transform: rotate(-6deg) } 75% { transform: rotate(6deg) } }
+  @keyframes pulse-soft { 0%, 100% { opacity: 1 } 50% { opacity: .55 } }
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, .font-display { font-family: var(--font-display); }
+
+/* Clear, consistent keyboard focus everywhere */
+:focus-visible { outline: 3px solid #ffb703; outline-offset: 3px; border-radius: 10px; }
+
+/* Playful backdrop for game (projected / student) screens */
+.game-bg {
+  background-color: #2a1477;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 122, 26, .35) 0 90px, transparent 91px),
+    radial-gradient(circle at 88% 12%, rgba(31, 111, 224, .45) 0 120px, transparent 121px),
+    radial-gradient(circle at 82% 88%, rgba(13, 143, 106, .35) 0 140px, transparent 141px),
+    radial-gradient(circle at 8% 92%, rgba(217, 45, 85, .35) 0 110px, transparent 111px),
+    radial-gradient(rgba(255, 255, 255, .08) 1.5px, transparent 1.6px),
+    linear-gradient(160deg, #4722c9 0%, #2a1477 70%);
+  background-size: auto, auto, auto, auto, 26px 26px, auto;
+  background-attachment: fixed;
+}
+
+.card { background: white; border-radius: 1.25rem; box-shadow: 0 1px 0 rgba(29, 20, 66, .04), 0 8px 24px -12px rgba(29, 20, 66, .18); }
+.chunky { box-shadow: inset 0 -6px 0 rgba(0, 0, 0, .18); }
+.chunky:active:not(:disabled) { box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .18); transform: translateY(2px); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
